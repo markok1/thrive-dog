@@ -1,0 +1,114 @@
+.how-it-works {
+  .wrapper {
+    display: flex;
+    padding: var(--padding-60, 60px) var(--padding-16, 16px);
+    flex-direction: column;
+    gap: var(--40-px, 40px);
+  }
+  .bottom-boxes {
+    .primary-button {
+      padding: var(--padding-8, 8px) var(--padding-8, 8px);
+      font-size: 17px;
+    }
+  }
+}
+.how-top {
+  display: flex;
+  padding-top: var(--padding-20, 20px);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-16, 16px);
+}
+.how-it-works-boxes {
+  display: flex;
+  padding: var(--padding-16, 16px);
+  flex-direction: column;
+  gap: var(--spacing-12, 12px);
+
+  border-radius: var(--border-4, 4px);
+  background: var(--color-background, #edf7fe);
+  .how-box {
+    display: flex;
+    padding: var(--padding-20, 20px) var(--padding-16, 16px);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-24, 24px);
+
+    border-radius: var(--border-4, 4px);
+    background: var(--neutral-white, #fff);
+
+    position: relative;
+    .left-arrow {
+      position: absolute;
+      top: -27px;
+      left: -10px;
+    }
+    .right-arrow {
+      position: absolute;
+      top: -40px;
+      right: -4px;
+    }
+
+    .how-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-8, 8px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .how-it-works-boxes .how-box .left-arrow {
+    display: none;
+  }
+  .how-box .right-arrow {
+    display: none;
+  }
+  .how-it-works-boxes {
+    flex-wrap: wrap;
+    flex-direction: unset;
+    justify-content: center;
+    gap: 16px;
+    .how-box {
+      width: calc(33.33% - 16px);
+      height: 292px;
+    }
+  }
+  .how-content {
+    .text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+  }
+  .how-it-works .wrapper {
+    gap: 50px;
+  }
+  .how-it-works {
+    .sub-text {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .how-top {
+    padding-top: 24px;
+    h2 {
+      margin-bottom: 5px;
+    }
+    svg {
+      margin-bottom: 7px;
+    }
+  }
+  .how-it-works-boxes .how-box {
+    padding: 37px 16px 20px 16px;
+  }
+  .how-it-works .wrapper {
+    padding: 60px 16px 83px 16px;
+  }
+}

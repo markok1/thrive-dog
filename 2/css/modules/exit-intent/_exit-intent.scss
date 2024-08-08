@@ -1,0 +1,135 @@
+.exit-intent {
+  visibility: hidden;
+}
+.show-exit-intent {
+  visibility: visible;
+  .exit-holder {
+    transform: scale(1);
+    transition: all 0.5s ease-out;
+  }
+}
+.exit-intent-success {
+  display: none;
+  color: #178c11 !important;
+}
+.exit-holder {
+  transform: scale(0);
+  overflow: auto;
+  background: var(--light-blue, #edf7fe);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  justify-content: center;
+
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+
+  max-width: 768px;
+
+  margin: auto;
+
+  gap: 16px;
+  border-radius: var(--border-8, 8px);
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.exit-left {
+  display: none;
+  width: 100%;
+  height: 100%;
+  .image {
+    height: 100%;
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+}
+.exit-right {
+  width: 100%;
+  height: 100%;
+  padding: var(--padding-16, 16px) var(--padding-16, 16px)
+    var(--padding-16, 16px) var(--padding-16, 16px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  justify-content: center;
+
+  gap: 16px;
+
+  .primary-button {
+    max-width: unset;
+  }
+  h2 {
+    text-align: center;
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+    text-transform: capitalize;
+    width: 100%;
+    color: var(--color-primary, #005299);
+    span {
+      color: var(--color-secondary, #50abf9);
+    }
+  }
+}
+.close-exit-intent {
+  position: absolute;
+  top: 12px;
+  right: 4px;
+  cursor: pointer;
+  z-index: 12;
+}
+
+@media screen and (min-width: 600px) {
+  .exit-holder {
+    display: flex;
+    flex-direction: unset;
+  }
+  .exit-left {
+    display: block;
+    width: 50%;
+  }
+  .exit-right {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .exit-holder {
+    max-width: 800px;
+    // justify-content: center;
+    top: 10px;
+    bottom: 10px;
+    max-height: 550px;
+    h3 {
+      padding-top: 0px;
+    }
+    .quote-form-inputs {
+      .primary-button {
+        max-width: 100%;
+      }
+    }
+  }
+  .fullname-and-email {
+    flex-direction: unset;
+    input {
+      width: 100%;
+    }
+  }
+  .quote-form-inputs textarea {
+    min-height: 160px;
+  }
+  .quote-form--completed {
+    max-width: 580px;
+  }
+}

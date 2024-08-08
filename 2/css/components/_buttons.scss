@@ -1,0 +1,84 @@
+.primary-button {
+  display: flex;
+  padding: var(--padding-8, 8px);
+  justify-content: center;
+  align-items: center;
+
+  max-width: 358px;
+  width: 100%;
+
+  border-radius: var(--border-4, 4px);
+  border: 1px solid transparent;
+  background: var(--color-secondary, #50abf9);
+  color: var(--neutral-white, #fff);
+
+  font-family: $roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  transition: all 0.25s ease;
+  &:hover {
+    transition: all 0.25s ease;
+    background: #4693d7;
+    box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+  }
+}
+.get-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--color-primary, #005299);
+  color: var(--color-primary, #005299);
+
+  border-radius: var(--border-4, 4px);
+  padding: 8px var(--padding-8, 8px);
+
+  text-align: center;
+  font-family: $graphik;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+}
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  border-radius: var(--border-4, 4px);
+  background: var(--color-secondary, #50abf9);
+  padding: var(--padding-8, 8px);
+  color: var(--neutral-white, #fff);
+
+  color: var(--neutral-white, #fff);
+  text-align: center;
+  font-family: $roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  &:hover {
+    transition: all 0.25s ease;
+    background: #4693d7;
+    box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 3px 13px -4px rgba(0, 0, 0, 0.75);
+  }
+}
+@media screen and (max-width: 340px) {
+  .phone {
+    gap: 4px;
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .primary-button {
+    max-width: 260px;
+  }
+}

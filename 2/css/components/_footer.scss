@@ -1,0 +1,92 @@
+.footer {
+  //added for sticky bottom navbar
+  padding-bottom: 60px;
+  // 60 is the height of the sticky bar
+  background: var(--neutral-extra-light, rgba(17, 17, 17, 0.03));
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: var(--padding-40, 40px) var(--padding-16, 16px);
+    gap: var(--spacing-16, 16px);
+    > .image:first-child {
+      margin: auto;
+      max-width: 400px;
+    }
+  }
+}
+.location-and-phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-16, 16px);
+  a,
+  .adress {
+    display: flex;
+    gap: var(--spacing-8, 8px);
+
+    color: var(--color-primary, #005299);
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+.privacy-terms {
+  display: flex;
+  padding-top: var(--spacing-12, 12px);
+  flex-direction: column;
+  gap: var(--spacing-16, 16px);
+  .privacy-top {
+    display: flex;
+    gap: var(--spacing-16, 16px);
+    .text-small {
+      color: var(--neutral-black, #111);
+    }
+  }
+  .text-small {
+    color: var(--neutral-grey-dark, rgba(17, 17, 17, 0.64));
+    span {
+      display: block;
+    }
+  }
+}
+
+.footer-desktop {
+  > p {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .footer {
+    padding-bottom: 0px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .wrapper > .image:first-child {
+    display: none;
+  }
+  .footer-desktop {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .location-and-phone {
+    margin-left: auto;
+  }
+  .footer-desktop {
+    > p {
+      max-width: 484px;
+    }
+  }
+  .privacy-terms {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    > .text-small {
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}

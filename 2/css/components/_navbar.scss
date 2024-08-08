@@ -1,0 +1,37 @@
+.nav {
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--padding-4, 4px) var(--padding-16, 16px);
+  }
+}
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8, 8px);
+  p {
+    color: var(--color-primary, #005299);
+  }
+}
+.logo {
+  max-height: 60px;
+}
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 4px 0px;
+    .nav-buttons {
+      p {
+        flex-shrink: 0;
+        font-size: 16px;
+      }
+      > a {
+        max-width: 170px;
+        width: 100%;
+      }
+    }
+    .phone {
+      width: 100%;
+    }
+  }
+}

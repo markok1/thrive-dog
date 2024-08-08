@@ -1,0 +1,125 @@
+.quick-and-clean {
+  .wrapper {
+    display: flex;
+    padding: var(--padding-80, 80px) var(--padding-16, 16px);
+    flex-direction: column;
+    gap: var(--spacing-32, 32px);
+  }
+  .quick-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-16, 16px);
+  }
+  .quick-holder {
+    display: flex;
+    padding-bottom: var(--padding-20, 0px);
+    flex-direction: column;
+    gap: var(--spacing-12, 12px);
+    .quick-box {
+      display: flex;
+      padding: var(--padding-16, 16px);
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-12, 12px);
+
+      max-width: 343px;
+      width: 100%;
+      margin: auto;
+
+      border-radius: var(--border-4, 4px);
+      background: var(--color-background, #edf7fe);
+      .text {
+        text-align: center;
+      }
+    }
+  }
+  .image {
+    text-align: center;
+    max-width: 343px;
+    margin: auto;
+    width: 100%;
+    height: 260px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.quick-desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .quick-top {
+    h2 {
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 48px; /* 120% */
+      letter-spacing: -0.4px;
+    }
+  }
+  .quick-and-clean {
+    gap: 40px;
+    .quick-holder {
+      flex-direction: unset;
+      flex-wrap: wrap;
+    }
+  }
+  .quick-and-clean .image {
+    max-width: 491px;
+    margin: auto;
+    height: 290px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quick-and-clean .quick-holder {
+    flex-direction: column;
+    flex-wrap: unset;
+    padding-bottom: 0px;
+    .quick-box {
+      flex-direction: unset;
+      margin: unset;
+      max-width: 580px;
+      .text {
+        text-align: left;
+      }
+    }
+  }
+  .quick-desktop {
+    flex-direction: unset;
+    align-items: center;
+    gap: 20px;
+    .quick-holder {
+      width: 50%;
+    }
+    .image {
+      width: 50%;
+      height: 350px;
+      max-width: 100%;
+      margin: unset;
+    }
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .quick-and-clean {
+    .wrapper {
+      padding: 110px 16px;
+    }
+
+    .quick-top {
+      padding-top: 28px;
+      h2 {
+        margin-bottom: 4px;
+      }
+      svg {
+        margin-bottom: 9px;
+      }
+    }
+  }
+}
